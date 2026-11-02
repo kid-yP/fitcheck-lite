@@ -34,7 +34,7 @@ export async function removeBackground(
   const { removeBackground: remove } = await import("@imgly/background-removal");
   return await remove(file, {
     output: { format: "image/png" },
-    progress: (_key, current, total) => {
+    progress: (_key: string, current: number, total: number) => {
       if (onProgress && total > 0) onProgress(Math.round((current / total) * 100));
     },
   });

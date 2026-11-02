@@ -1,0 +1,38 @@
+{
+  "name": "fitcheck-lite",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev --webpack",
+    "build": "next build --webpack",
+    "start": "next start",
+    "lint": "eslint",
+    "test": "tsx --test tests/*.test.ts",
+    "typecheck": "tsc --noEmit",
+    "convex:dev": "convex dev",
+    "test:backend": "vitest run"
+  },
+  "dependencies": {
+    "@clerk/nextjs": "^7.9.23",
+    "@imgly/background-removal": "^1.1.5",
+    "convex": "^1.49.0",
+    "geist": "^1.9.0",
+    "next": "16.4.3",
+    "react": "19.3.0",
+    "react-dom": "19.3.0"
+  },
+  "devDependencies": {
+    "@edge-runtime/vm": "^5.0.0",
+    "@tailwindcss/postcss": "^4.3.3",
+    "@types/node": "^22.20.5",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "convex-test": "^0.0.66",
+    "eslint": "^4.0.0",
+    "eslint-config-next": "^0.2.4",
+    "tailwindcss": "^4",
+    "tsx": "^4.23.15",
+    "typescript": "^5",
+    "vitest": "^5.0.5"
+  }
+}

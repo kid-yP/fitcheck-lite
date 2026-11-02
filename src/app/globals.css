@@ -1,0 +1,141 @@
+@import "tailwindcss";
+
+/* Design tokens. Light is the default; [data-theme="dark"] swaps every colour at once. */
+:root {
+  --bg: #f7f6f2;
+  --surface: #ffffff;
+  --surface-2: #edece6;
+  --ink: #0c0c0d;
+  --muted: #6b6b71;
+  --line: #dddcd5;
+  --accent: #f5c518;
+  --accent-ink: #0c0c0d;
+  --inverse: #0c0c0d;
+  --on-inverse: #f7f6f2;
+  color-scheme: light;
+}
+[data-theme="dark"] {
+  --bg: #0a0a0b;
+  --surface: #131315;
+  --surface-2: #1d1d20;
+  --ink: #f4f3ee;
+  --muted: #8e8e96;
+  --line: #28282c;
+  --inverse: #f4f3ee;
+  --on-inverse: #0a0a0b;
+  color-scheme: dark;
+}
+
+@theme inline {
+  --color-bg: var(--bg);
+  --color-surface: var(--surface);
+  --color-surface-2: var(--surface-2);
+  --color-ink: var(--ink);
+  --color-muted: var(--muted);
+  --color-line: var(--line);
+  --color-accent: var(--accent);
+  --color-inverse: var(--inverse);
+  --color-on-inverse: var(--on-inverse);
+  --font-sans: var(--font-geist-sans), ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-mono: var(--font-geist-mono), ui-monospace, "SF Mono", Menlo, monospace;
+}
+
+html { scroll-behavior: smooth; }
+body {
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--font-sans);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+button { cursor: pointer; }
+::selection { background: var(--accent); color: var(--accent-ink); }
+:focus-visible { outline: 2px solid var(--ink); outline-offset: 2px; }
+
+/* Typography */
+.display { font-weight: 600; letter-spacing: -0.045em; line-height: 0.96; }
+.label {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+.outline-text { -webkit-text-stroke: 1.5px var(--ink); color: transparent; }
+
+/* Surfaces */
+.card { background: var(--surface); border: 1px solid var(--line); border-radius: 16px; }
+.checker {
+  background-color: var(--surface-2);
+  background-image:
+    linear-gradient(45deg, var(--line) 25%, transparent 25%, transparent 75%, var(--line) 75%),
+    linear-gradient(45deg, var(--line) 25%, transparent 25%, transparent 75%, var(--line) 75%);
+  background-size: 16px 16px;
+  background-position: 0 0, 8px 8px;
+  background-blend-mode: soft-light;
+}
+.tape {
+  height: 12px;
+  background:
+    repeating-linear-gradient(90deg, var(--accent-ink) 0 1px, transparent 1px 10px) bottom / 100% 5px no-repeat,
+    repeating-linear-gradient(90deg, var(--accent-ink) 0 1px, transparent 1px 50px) bottom / 100% 9px no-repeat,
+    var(--accent);
+}
+
+/* Controls */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  border-radius: 999px;
+  border: 1px solid var(--inverse);
+  background: var(--inverse);
+  color: var(--on-inverse);
+  padding: 0.55rem 1.15rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  transition: transform 0.15s, opacity 0.15s, border-color 0.15s;
+}
+.btn:hover:not(:disabled) { transform: translateY(-1px); }
+.btn:active:not(:disabled) { transform: translateY(0); }
+.btn:disabled { opacity: 0.45; cursor: not-allowed; }
+.btn-accent { background: var(--accent); border-color: var(--accent); color: var(--accent-ink); }
+.btn-ghost { background: transparent; color: var(--ink); border-color: var(--line); }
+.btn-ghost:hover:not(:disabled) { border-color: var(--ink); }
+.btn-sm { padding: 0.3rem 0.8rem; font-size: 0.8rem; }
+
+.field {
+  width: 100%;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background: var(--surface);
+  color: var(--ink);
+  padding: 0.55rem 0.8rem;
+  font-size: 0.875rem;
+}
+.field::placeholder { color: var(--muted); }
+.chip {
+  border: 1px solid var(--line);
+  background: var(--surface);
+  border-radius: 999px;
+  padding: 0.25rem 0.8rem;
+  font-size: 0.8rem;
+  transition: border-color 0.15s;
+}
+.chip:hover { border-color: var(--ink); }
+.chip[aria-pressed="true"], .chip[aria-checked="true"] {
+  background: var(--inverse);
+  color: var(--on-inverse);
+  border-color: var(--inverse);
+}
+
+/* Motion (disabled for people who prefer reduced motion) */
+@keyframes rise {
+  from { opacity: 0; transform: translateY(18px) rotate(var(--r, 0deg)); }
+  to { opacity: 1; transform: translateY(0) rotate(var(--r, 0deg)); }
+}
+.rise { animation: rise 0.8s cubic-bezier(0.2, 0.7, 0.2, 1) both; animation-delay: var(--d, 0s); transform: rotate(var(--r, 0deg)); }
+@media (prefers-reduced-motion: reduce) {
+  * { transition: none !important; animation: none !important; scroll-behavior: auto !important; }
+}

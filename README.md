@@ -1,4 +1,4 @@
-fitcheck.lite
+## Fitcheck.lite
 <p align="center">
   <strong>A free digital wardrobe that helps you decide what to wear.</strong><br />
   Organize the clothes you own, build outfits on a digital dress form, check how a look works together,

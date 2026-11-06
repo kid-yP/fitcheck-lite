@@ -1,4 +1,4 @@
-## Fitcheck.lite
+# Fitcheck.lite
 <p align="center">
   <strong>A free digital wardrobe that helps you decide what to wear.</strong><br />
   Organize the clothes you own, build outfits on a digital dress form, check how a look works together,
@@ -17,7 +17,7 @@
   <img alt="License MIT" src="https://img.shields.io/badge/License-MIT-7c9a6b.svg" />
 </p>Preview note: The gallery images in this repository are illustrative portfolio mockups, not captured screenshots of the deployed application. Replace them with real screenshots from the live app when available. The live demo and source code are linked above.
 
-Why I built it
+### Why I built it
 I kept standing in front of a full wardrobe with nothing to wear. At college, it was worse: limited time in the morning, not much mirror space, and the same few outfits on repeat while other clothes stayed untouched.
 
 I wanted a simple place to keep track of what I own, experiment with combinations before getting dressed, and get useful suggestions without needing to buy more clothes. That idea became fitcheck.lite.
@@ -32,29 +32,29 @@ Wear tracking	Update wear counts when an outfit is marked as worn, making it eas
 Product polish	Light and dark themes, command palette, responsive layout, mobile navigation, keyboard-friendly controls, and reduced-motion support.
 
 
-Preview gallery
+### Preview gallery
 The images below are illustrative UI concepts created for the repository presentation. They are not captured screenshots of the deployed application and should not be represented as such. Replace them with real captures from the live app whenever possible.
 Landing page	Live styling demo
 	
 
 
-# Add clothes	Wardrobe
+## Add clothes	Wardrobe
 	
 
 
-# Outfit studio	Match check
+## Outfit studio	Match check
 	
 
 
-# Saved outfits	AI stylist chat
+## Saved outfits	AI stylist chat
 	
 
 
-# Command palette	Mobile wardrobe
+## Command palette	Mobile wardrobe
 	
 
 
-# Mobile outfit studio	Light theme
+## Mobile outfit studio	Light theme
 	
 
 

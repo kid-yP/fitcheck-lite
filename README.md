@@ -36,26 +36,15 @@ Product polish	Light and dark themes, command palette, responsive layout, mobile
 The images below are illustrative UI concepts created for the repository presentation. They are not captured screenshots of the deployed application and should not be represented as such. Replace them with real captures from the live app whenever possible.
 Landing page	Live styling demo
 	
-
-
-## Add clothes	Wardrobe
+#### Add clothes	Wardrobe
 	
-
-
-## Outfit studio	Match check
+#### Outfit studio	Match check
 	
-
-
-## Saved outfits	AI stylist chat
+#### Saved outfits	AI stylist chat
 	
-
-
-## Command palette	Mobile wardrobe
+#### Command palette	Mobile wardrobe
 	
-
-
-## Mobile outfit studio	Light theme
-	
+#### Mobile outfit studio	Light theme
 
 
 How it works
@@ -102,12 +91,12 @@ Run locally
 Requirements: Node.js 20.9 or newer, plus configured Clerk, Convex, and Groq credentials. See [`SETUP-GUIDE.md`](SETUP-GUIDE.md) for the full walkthrough and check .env.example for the environment variable names required by this project.
 npm install
 cp .env.example .env.local
-# Add the required values to .env.local
+### Add the required values to .env.local
 
-# Terminal 1
+### Terminal 1
 npx convex dev
 
-# Terminal 2
+### Terminal 2
 npm run dev
 Open http://localhost:3000.
 Useful commands
@@ -123,7 +112,7 @@ npm run build	Create a production build.
 
 The repository's original project notes report 31 passing tests. Run the test commands above on the current commit to confirm the latest count before relying on that number in a résumé or application.
 
-Honest limitations
+### Honest limitations
 - The outfit preview is a flat dress-form collage, not a photorealistic image of the user wearing the clothes.
 - Colour and formality ratings are rule-based recommendations, not objective fashion judgments. The scoring rules can be tuned in the code.
 - Free AI providers have rate limits and availability can change. Basic wardrobe and rule-based styling features remain separate from the AI chat layer.
@@ -132,9 +121,8 @@ Roadmap
 - [ ] Share an outfit as an image
 - [ ] Packing-list generator for trips
 - [ ] Optional realistic try-on as a separately funded feature
-Credits
-Inspired by Sonny Sangha's AI wardrobe tutorial. fitcheck.lite is an independent implementation with its own code, design, architecture, features, and free-first approach.
-Author
+
+### Author
 Kidus Yosef · Software Engineering student
 LinkedIn · GitHub
 License

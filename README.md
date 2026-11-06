@@ -38,23 +38,23 @@ Landing page	Live styling demo
 	
 
 
-Add clothes	Wardrobe
+# Add clothes	Wardrobe
 	
 
 
-Outfit studio	Match check
+# Outfit studio	Match check
 	
 
 
-Saved outfits	AI stylist chat
+# Saved outfits	AI stylist chat
 	
 
 
-Command palette	Mobile wardrobe
+# Command palette	Mobile wardrobe
 	
 
 
-Mobile outfit studio	Light theme
+# Mobile outfit studio	Light theme
 	
 
 
@@ -69,7 +69,7 @@ flowchart LR
     APP -. browser-side .-> IMG[Background removal and colour detection]
     APP -. local TypeScript .-> ENGINE[Stylist engine and match check]
 ```
-The stylist engine
+## The stylist engine
 The recommendation engine in src/lib/stylist.ts is plain TypeScript and does not need a network request. Based on the wardrobe, occasion, and temperature, it:
 1. Scores clothing items for formality, seasonal suitability, and wear frequency.
 2. Builds supported outfit combinations, such as a top with bottoms or a dress, and adds shoes or outerwear when appropriate.
@@ -85,7 +85,8 @@ Engineering decisions
 - Input and API safeguards: inputs are validated server-side; the stylist route requires an authenticated session, trims untrusted text, and applies per-user rate limiting.
 - Provider resilience: the AI wrapper tries configured models in order and can return a readable fallback message when providers are unavailable.
 - Accessible interaction: semantic controls, labels, visible focus, live match-result announcements, and reduced-motion support are part of the interface.
-Tech stack
+
+## Tech stack
 Area	Technology
 Application	Next.js 16 App Router, React 19, TypeScript
 Styling	Tailwind CSS 4, CSS-variable design tokens, Geist fonts

@@ -110,6 +110,7 @@ npm run typecheck	Check TypeScript types.
 npm run build	Create a production build.
 
 
+
 The repository's original project notes report 31 passing tests. Run the test commands above on the current commit to confirm the latest count before relying on that number in a résumé or application.
 
 ### Honest limitations

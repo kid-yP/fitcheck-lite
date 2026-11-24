@@ -48,7 +48,7 @@ Landing page	Live styling demo
 #### Mobile outfit studio	Light theme
 
 
-How it works
+### How it works
 ```mermaid
 flowchart LR
     U[User] --> APP[Next.js 16 / React 19]

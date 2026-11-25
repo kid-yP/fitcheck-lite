@@ -118,6 +118,7 @@ The repository's original project notes report 31 passing tests. Run the test co
 - The outfit preview is a flat dress-form collage, not a photorealistic image of the user wearing the clothes.
 - Colour and formality ratings are rule-based recommendations, not objective fashion judgments. The scoring rules can be tuned in the code.
 - Free AI providers have rate limits and availability can change. Basic wardrobe and rule-based styling features remain separate from the AI chat layer.
+
 Roadmap
 - [ ] Weather by city and a week-ahead outfit planner
 - [ ] Share an outfit as an image
